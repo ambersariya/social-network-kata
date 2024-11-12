@@ -14,9 +14,9 @@ class TestSocialNetwork:
         user = "Alice"
         message = "I love the weather today"
 
-        social_network.post_message(user=user, message=message)
+        social_network.create_post(user=user, post=message)
 
-        message_repository.add_message.assert_called_once_with(user, message)
+        message_repository.add_post.assert_called_once_with(user, message)
 
     def test_get_timeline(self, message_repository):
         message_repository.get_timeline.return_value = ["I love the weather today"]
