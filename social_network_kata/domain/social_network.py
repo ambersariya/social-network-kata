@@ -6,7 +6,6 @@ class SocialNetwork:
     def __init__(self, message_repository: MessageRepository):
         self.message_repository = message_repository
 
-    # ... rest of the class definition ...
     def create_post(self, user: str, post: str) -> None:
         self.message_repository.add_post(user, post)
 
