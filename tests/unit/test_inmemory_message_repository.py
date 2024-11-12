@@ -8,7 +8,7 @@ class TestInMemoryMessageRepository:
         message = "Hello world"
         message_repository = InMemoryMessageRepository()
 
-        message_repository.add_post(user=user, message=message)
+        message_repository.add_post(user=user, post=message)
 
         assert message_repository.get_timeline(user=user) == [
             Post(user=user, message="Hello world")

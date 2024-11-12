@@ -6,8 +6,8 @@ from social_network_kata.domain.post import Post
 
 class MessageRepository(Protocol):
     @abstractmethod
-    def add_post(self, user, message) -> None:
+    def add_post(self, user: str, post: str) -> None:
         pass
     @abstractmethod
-    def get_timeline(self, user) -> list[Post]:
+    def get_timeline(self, user: str) -> list[Post]:
         pass

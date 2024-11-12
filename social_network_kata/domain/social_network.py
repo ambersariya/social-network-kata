@@ -7,7 +7,7 @@ class SocialNetwork:
         self.message_repository = message_repository
 
     def create_post(self, user: str, post: str) -> None:
-        self.message_repository.add_post(user, post)
+        self.message_repository.add_post(user=user, post=post)
 
-    def get_timeline(self, user) -> list[Post]:
-        return self.message_repository.get_timeline(user)
+    def get_timeline(self, user: str) -> list[Post]:
+        return self.message_repository.get_timeline(user=user)

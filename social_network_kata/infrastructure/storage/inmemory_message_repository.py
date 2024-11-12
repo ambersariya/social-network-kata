@@ -6,8 +6,8 @@ class InMemoryMessageRepository(MessageRepository):
     def __init__(self):
         self.__messages = []
 
-    def add_post(self, user: str, message: str) -> None:
-        self.__messages.append(Post(user=user, message=message))
+    def add_post(self, user: str, post: str) -> None:
+        self.__messages.append(Post(user=user, message=post))
 
     def get_timeline(self, user: str) -> list[Post]:
         filter_by_user = lambda message: message.user == user
