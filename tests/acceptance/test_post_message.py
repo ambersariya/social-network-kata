@@ -34,8 +34,13 @@ class TestPostMessage:
         ) 
 
         cli.run()
-
-        mock_printer_wrapper.print.assert_called_once_with("I love the weather today (5 minutes ago)")
+        
+        mock_printer_wrapper.output.assert_has_calls(
+            [
+                "Welcome to social network. Please type a command.",
+                "I love the weather today (5 minutes ago)"
+            ]
+        )
 
     # def test_user_can_read_post_by_id(self):
     #     pass

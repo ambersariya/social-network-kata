@@ -7,9 +7,10 @@ class SocialNetworkService:
     def __init__(self, clock: ClockWrapper):
         self.clock_wrapper = ClockWrapper()
 
-    def create_post(self, time, message, username):
+    def create_post(self, message, username):
         raise NotImplementedError
     
     def display_wall(self, username):
         raise NotImplementedError
+    
     
